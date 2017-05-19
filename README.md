@@ -49,10 +49,24 @@ More information is only accessible by people who are already enrolled in Term 2
 of CarND. If you are enrolled, see [the project page](https://classroom.udacity.com/nanodegrees/nd013/parts/40f38239-66b6-46ec-ae68-03afd8a601c8/modules/f1820894-8322-4bb3-81aa-b26b3c6dcbaf/lessons/e8235395-22dd-4b87-88e0-d108c5e5bbf4/concepts/6a4d8d42-6a04-4aa6-b284-1697c0fd6562)
 for instructions and the project rubric.
 
-## Hints!
+## PID Controller
 
-* You don't have to follow this directory structure, but if you do, your work
-  will span all of the .cpp files here. Keep an eye out for TODOs.
+P accounts for present values of the error. For example, if the error is large and positive, the control output will also be large and positive.
+
+I accounts for past values of the error. For example, if the current output is not sufficiently strong, the integral of the error will accumulate over time, and the controller will respond by applying a stronger action.
+
+D accounts for possible future trends of the error, based on its current rate of change.
+
+## Parameter Tuning
+
+The final values for the coefficients for a speed of 50 mph are:
+
+Kp = 0.16
+Ki = 0.0001
+Kd = 4.0
+
+## Result
+Here's a [link to my video result](./pid_sim.mp4)
 
 ## Call for IDE Profiles Pull Requests
 
